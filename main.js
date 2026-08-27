@@ -10,5 +10,12 @@ botoes[0].onclick = diminuir;
 function diminuir(){
    tamanhoSenha--;
    numeroSenha.textContent = tamanhoSenha;
-
 }
+
+botoes[1].onclick = aumentar;
+
+function aumentar(){
+   tamanhoSenha++;
+   numeroSenha.textContent = tamanhoSenha
+}
+
