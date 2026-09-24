@@ -31,17 +31,25 @@ const botoes = document.querySelectorAll(".parametro-senha__botao")
 botoes[0].onclick = diminuir;
 
 function diminuir(){
-   tamanhoSenha--;
-   numeroSenha.textContent = tamanhoSenha;
-   geraSenha()
+
+   if(tamanhoSenha > 0){
+    tamanhoSenha--;
+    numeroSenha.textContent = tamanhoSenha;
+    geraSenha()
+   }
+  
 }
 
 botoes[1].onclick = aumentar;
 
 function aumentar(){
-   tamanhoSenha++;
-   numeroSenha.textContent = tamanhoSenha
-   geraSenha()
+
+   if(tamanhoSenha < 20){
+      tamanhoSenha++;
+      numeroSenha.textContent = tamanhoSenha
+      geraSenha()
+   }
+
 }
 
 geraSenha()
@@ -62,7 +70,15 @@ function geraSenha(){
 
 function classificarSenha(){
 
+     forcaSenha.classList.remove('forte', 'media', 'fraca')
+
+
    if(tamanhoSenha > 11){
       forcaSenha.classList.add('forte')
+   }else if(tamanhoSenha < 7){
+        forcaSenha.classList.add('fraca')
+   }else{
+      forcaSenha.classList.add('media')
    }
 }
+
