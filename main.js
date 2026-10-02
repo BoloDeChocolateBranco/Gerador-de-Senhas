@@ -14,7 +14,7 @@ let simbolos = '!@#&*/'
 tamanhoSenha = 8;
 numeroSenha.textContent = tamanhoSenha;
 
-const checkbox = document.querySelectorAll('.checkbox')
+const checkbox = document.querySelectorAll('.checkbox input')
 
 for(let i = 0; i < checkbox.lenght; i++){
    checkbox[i].onclick = geraSenha;
@@ -98,4 +98,5 @@ function classificarSenha(){
       forcaSenha.classList.add('media')
    }
 }
+
 
